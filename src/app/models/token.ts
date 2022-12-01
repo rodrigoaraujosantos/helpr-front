@@ -1,4 +1,4 @@
 export interface Token {
-  acccessToken: string;
+  accessToken: string;
   tokenType: string;
 }
