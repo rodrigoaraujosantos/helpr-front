@@ -23,4 +23,11 @@ export class ClientesComponent implements OnInit {
       this.dataSource = clientes;
     });
   }
+
+  public delete(id: number): void {
+    this.clienteService.delete(id).subscribe(() => {
+      alert("Cliente excluido");
+      this.initializeTable();
+    });
+  }
 }
