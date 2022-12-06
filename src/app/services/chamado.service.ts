@@ -23,6 +23,16 @@ export class ChamadoService {
     );
   }
 
+  public findById(id: string): Observable<Chamado> {
+    return this.http.get<Chamado>(`${API_CONFIG.baseUrl}/chamados/${id}`).pipe(
+      catchError(error => {
+        alert("Erro ao buscar dados de chamado");
+        console.error(error);
+        return EMPTY;
+      })
+    )
+  }
+
   public create(chamado: Chamado): Observable<Chamado> {
     const data = {
       titulo: chamado.titulo,

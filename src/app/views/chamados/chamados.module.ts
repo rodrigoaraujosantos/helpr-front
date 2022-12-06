@@ -6,20 +6,23 @@ import { ChamadosComponent } from './chamados/chamados.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { NewChamadoComponent } from './new-chamado/new-chamado.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditChamadoComponent } from './edit-chamado/edit-chamado.component';
 
 
 @NgModule({
   declarations: [
     ChamadosComponent,
-    NewChamadoComponent
+    NewChamadoComponent,
+    EditChamadoComponent
   ],
   imports: [
     CommonModule,
     ChamadosRoutingModule,
     ComponentsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ChamadosModule { }
